@@ -69,9 +69,6 @@ for ch in chunks:
 print("[OK] Vector DB created and populated!")
 
 
-# تحميل قاعدة البيانات
-client = chromadb.PersistentClient(path="vector_db")
-collection = client.get_collection("policies")
 
 # جلب كل الـ documents
 results = collection.get(include=["documents"])
